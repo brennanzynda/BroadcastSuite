@@ -48,12 +48,16 @@ namespace BroadcastSuite
         private void TextBox_TextChangedL(object sender, TextChangedEventArgs e)
         {
             TextBox box = (TextBox)sender;
+            TextBlock block = (TextBlock)FindName("LeftText");
+            block.Text = box.Text;
             //MessageBox.Show("Text Changed to \"" + box.Text + "\"");
         }
 
         private void TextBox_TextChangedR(object sender, TextChangedEventArgs e)
         {
             TextBox box = (TextBox)sender;
+            TextBlock block = (TextBlock)FindName("RightText");
+            block.Text = box.Text;
             //MessageBox.Show("Text Changed to \"" + box.Text + "\"");
         }
     }
