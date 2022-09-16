@@ -29,13 +29,32 @@ namespace BroadcastSuite
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Button Pressed");
+            //MessageBox.Show("Button Pressed");
+
+            // Store values for swap
+            TextBlock tb1 = (TextBlock)FindName("LeftText");
+            TextBlock tb2 = (TextBlock)FindName("RightText");
+            TextBox box1 = (TextBox)FindName("BoxLeft");
+            TextBox box2 = (TextBox)FindName("BoxRight");
+
+
+            String tempText = tb1.Text;
+            tb1.Text = tb2.Text;
+            tb2.Text = tempText;
+            //MessageBox.Show(s1);
+
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        private void TextBox_TextChangedL(object sender, TextChangedEventArgs e)
         {
             TextBox box = (TextBox)sender;
-            MessageBox.Show("Text Changed to \"" + box.Text + "\"");
+            //MessageBox.Show("Text Changed to \"" + box.Text + "\"");
+        }
+
+        private void TextBox_TextChangedR(object sender, TextChangedEventArgs e)
+        {
+            TextBox box = (TextBox)sender;
+            //MessageBox.Show("Text Changed to \"" + box.Text + "\"");
         }
     }
 }
