@@ -20,9 +20,22 @@ namespace BroadcastSuite
     /// </summary>
     public partial class MainWindow : Window
     {
+        string testString;
+
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Button Pressed");
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            TextBox box = (TextBox)sender;
+            MessageBox.Show("Text Changed to \"" + box.Text + "\"");
         }
     }
 }
