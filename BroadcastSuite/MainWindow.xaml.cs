@@ -20,11 +20,11 @@ namespace BroadcastSuite
     /// </summary>
     public partial class MainWindow : Window
     {
-        string testString;
 
         public MainWindow()
         {
             InitializeComponent();
+            
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -32,33 +32,35 @@ namespace BroadcastSuite
             //MessageBox.Show("Button Pressed");
 
             // Store values for swap
-            TextBlock tb1 = (TextBlock)FindName("LeftText");
-            TextBlock tb2 = (TextBlock)FindName("RightText");
             TextBox box1 = (TextBox)FindName("BoxLeft");
             TextBox box2 = (TextBox)FindName("BoxRight");
 
 
-            String tempText = tb1.Text;
-            tb1.Text = tb2.Text;
-            tb2.Text = tempText;
+
+            string tempText = box1.Text;
+            box1.Text = box2.Text;
+            box2.Text = tempText;
+            /*box1.Clear();
+            box2.Clear();*/
             //MessageBox.Show(s1);
 
         }
 
         private void TextBox_TextChangedL(object sender, TextChangedEventArgs e)
         {
+            /*
             TextBox box = (TextBox)sender;
             TextBlock block = (TextBlock)FindName("LeftText");
             block.Text = box.Text;
-            //MessageBox.Show("Text Changed to \"" + box.Text + "\"");
+            //MessageBox.Show("Text Changed to \"" + box.Text + "\"");*/
         }
 
         private void TextBox_TextChangedR(object sender, TextChangedEventArgs e)
-        {
+        {/*
             TextBox box = (TextBox)sender;
             TextBlock block = (TextBlock)FindName("RightText");
             block.Text = box.Text;
-            //MessageBox.Show("Text Changed to \"" + box.Text + "\"");
+            //MessageBox.Show("Text Changed to \"" + box.Text + "\"");*/
         }
     }
 }
